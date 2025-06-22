@@ -60,6 +60,7 @@
 #include "tweaks\resprite\includes.dm"
 #include "tweaks\russian_translation\includes.dm"
 #include "tweaks\gases\includes.dm"
+#include "tweaks\heads_on_belts\includes.dm"
 #include "tweaks\lead_pipe\includes.dm"
 #include "tweaks\lgbt_removal\includes.dm"
 #include "tweaks\tagline\includes.dm"
