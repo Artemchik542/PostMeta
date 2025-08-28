@@ -27,7 +27,7 @@
 
 This is MassMeta downstream fork of /tg/station SpaceStation 13.
 
-**Powered by Lambda 13 server**
+**Powered by PostMeta crew**
 
 **_RUSSIAN TEXT ALERT_**
 
