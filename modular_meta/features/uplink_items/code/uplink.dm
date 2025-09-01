@@ -2,8 +2,6 @@
 ///Вещи для нюкеров
 
 //Мехи нюкеров
-/* 13.08.2025 Закоменчено, так как был удалён с оф. тг
-
 
 /datum/uplink_item/mech/justice
 	name = "Justice Exosuit"
@@ -12,7 +10,7 @@
 	item = /obj/vehicle/sealed/mecha/justice/loaded
 	cost = 60
 
-*/
+
 ///Вещи для определённых ролей трейторов
 
 ///Обычные предметы в аплинках трейторов
