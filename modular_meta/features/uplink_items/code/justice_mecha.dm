@@ -750,7 +750,7 @@
 	new /obj/effect/temp_visual/mech_sparks(get_turf(chassis))
 	playsound(chassis, 'sound/vehicles/mecha/mech_stealth_effect.ogg' , 75, FALSE)
 	animate(chassis, alpha = 0, time = 0.5 SECONDS)
-	button_icon_state = "mech_phasis_on"
+	button_icon_state = "mech_stealth_on"
 	RegisterSignal(chassis, COMSIG_MOVABLE_BUMP, PROC_REF(bumb_on))
 	RegisterSignal(chassis, COMSIG_ATOM_BUMPED, PROC_REF(bumbed_on))
 	RegisterSignal(chassis, COMSIG_ATOM_TAKE_DAMAGE, PROC_REF(take_damage))
@@ -978,6 +978,7 @@
 /obj/item/mecha_parts/chassis/justice
 	name = "\improper Justice chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/justice
+	icon = 'modular_meta/features/uplink_items/icons/mech_construct.dmi'
 
 /obj/item/mecha_parts/part/justice_torso
 	name="\improper Justice torso"
