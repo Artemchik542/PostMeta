@@ -7,6 +7,7 @@
 ### TG Proc/File Changes:
 
 - code\_DEFINES\mecha.dm , line 44
+- code\modules\vehicles\mecha\mech_fabricator.dm
 
 ### TGUI Files:
 
