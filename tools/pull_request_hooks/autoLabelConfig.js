@@ -7,31 +7,34 @@
 // the label will not be removed
 export const file_labels = {
   GitHub: {
-    filepaths: [".github"],
+    filepaths: [".github/"],
   },
   SQL: {
-    filepaths: ["SQL"],
+    filepaths: ["SQL/"],
   },
   "Изменения карт": {
-    filepaths: ["_maps"],
+    filepaths: ["_maps/"],
+    file_extensions: [".dmm"],
   },
   Инструменты: {
-    filepaths: ["tools"],
+    filepaths: ["tools/"],
   },
   "Изменение конфигов": {
-    filepaths: ["config", "code/controllers/configuration/entries"],
+    filepaths: ["config/", "code/controllers/configuration/entries/"],
     add_only: true,
   },
   Спрайты: {
-    filepaths: ["icons"],
+    filepaths: ["icons/"],
+    file_extensions: [".dmi"],
     add_only: true,
   },
   Звуки: {
-    filepaths: ["sound"],
+    filepaths: ["sound/"],
+    file_extensions: [".ogg"],
     add_only: true,
   },
   UI: {
-    filepaths: ["tgui"],
+    filepaths: ["tgui/"],
     add_only: true,
   },
   "Модулярная фишка": {
