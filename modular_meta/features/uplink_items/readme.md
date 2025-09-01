@@ -8,6 +8,7 @@
 
 - code\_DEFINES\mecha.dm , line 44
 - code\modules\vehicles\mecha\mech_fabricator.dm
+- icons\mob\rideables\mech_construction.dmi
 
 ### TGUI Files:
 
