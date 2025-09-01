@@ -54,9 +54,32 @@
 	displayed_currency_name = " LP"
 	allow_custom = FALSE
 
+/obj/machinery/vending/sustenance/interact(mob/user)
+	if(!isliving(user))
+		return ..()
+	var/mob/living/living_user = user
+	if(!is_operational)
+	//MASSMETA EDIT BEGIN (ru_vendors)
+	//speak("No valid prisoner account found. Vending is not permitted.")
+		to_chat(user, span_warning("Не обнаружена действующая карта заключённого. Покупка не может быть произведена"))
+	//MASSMETA EDIT END
+		return
+	if(!istype(living_user.get_idcard(TRUE), /obj/item/card/id/advanced/prisoner))
+		if(!req_access)
+			speak("No valid prisoner account found. Vending is not permitted.")
+			return
+		if(!allowed(user))
+			speak("No valid permissions. Vending is not permitted.")
+			return
+	return ..()
+
 /obj/machinery/vending/sustenance/labor_camp/proceed_payment(obj/item/card/id/advanced/prisoner/paying_scum_id, mob/living/mob_paying, datum/data/vending_product/product_to_vend, price_to_use)
-	if(!istype(paying_scum_id))
-		speak("Не обнаружена действующая карта заключённого. Плати каторжными очками!")
+	if(!istype(paying_scum_id, /obj/item/card/id/advanced/prisoner))
+		//MASSMETA EDIT BEGIN (ru_vendors)
+		//speak("I don't take bribes! Pay with labor points!")
+
+		speak("Я не беру взяток! Плати каторжными очками!")
+		//MASSMETA EDIT END
 		return FALSE
 	if(LAZYLEN(product_to_vend.returned_products))
 		price_to_use = 0 //returned items are free

@@ -109,16 +109,16 @@
 
 		if(portable_recharger.incell.charge < 200 * recharge_coeff)
 			SSvis_overlays.add_vis_overlay(src, icon, "recharger-fail", layer, plane, dir, alpha)
-			SSvis_overlays.add_vis_overlay(src, icon, "recharger-fail", EMISSIVE_RENDER_PLATE, EMISSIVE_PLANE, dir, alpha)
+			SSvis_overlays.add_vis_overlay(src, icon, "recharger-fail", RENDER_PLANE_EMISSIVE, EMISSIVE_PLANE, dir, alpha)
 		else if(using_power)
 			SSvis_overlays.add_vis_overlay(src, icon, "recharger-charging", layer, plane, dir, alpha)
-			SSvis_overlays.add_vis_overlay(src, icon, "recharger-charging", EMISSIVE_RENDER_PLATE, EMISSIVE_PLANE, dir, alpha)
+			SSvis_overlays.add_vis_overlay(src, icon, "recharger-charging", RENDER_PLANE_EMISSIVE, EMISSIVE_PLANE, dir, alpha)
 		else
 			SSvis_overlays.add_vis_overlay(src, icon, "recharger-full", layer, plane, dir, alpha)
-			SSvis_overlays.add_vis_overlay(src, icon, "recharger-full", EMISSIVE_RENDER_PLATE, EMISSIVE_PLANE, dir, alpha)
+			SSvis_overlays.add_vis_overlay(src, icon, "recharger-full", RENDER_PLANE_EMISSIVE, EMISSIVE_PLANE, dir, alpha)
 	else
 		SSvis_overlays.add_vis_overlay(src, icon, "recharger-empty", layer, plane, dir, alpha)
-		SSvis_overlays.add_vis_overlay(src, icon, "recharger-empty", EMISSIVE_RENDER_PLATE, EMISSIVE_PLANE, dir, alpha)
+		SSvis_overlays.add_vis_overlay(src, icon, "recharger-empty", RENDER_PLANE_EMISSIVE, EMISSIVE_PLANE, dir, alpha)
 
 // используем старый код чтобы заставить работать новый
 /obj/machinery/recharger/portable_recharger/proc/setCharging(new_charging)
