@@ -4,3 +4,4 @@
 #include "antagonists.dm"
 #include "hardsuit.dm"
 #include "re_hooch_heals_assistants.dm"
+#include "justice_mecha.dm"
