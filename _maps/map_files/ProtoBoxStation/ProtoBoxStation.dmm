@@ -40110,7 +40110,7 @@
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "eJx" = (
-/obj/machinery/power/smes{
+/obj/machinery/power/smes/full{
 	charge = 5e+006
 	},
 /obj/structure/cable,

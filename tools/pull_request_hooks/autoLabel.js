@@ -173,7 +173,7 @@ async function check_diff_files_for_labels(github, context) {
  * Main function to get the updated label set
  */
 export async function get_updated_label_set({ github, context }) {
-  const { action, pull_request } = context.payload;
+  const { pull_request } = context.payload;
   const {
     body = "",
     diff_url,
@@ -203,7 +203,7 @@ export async function get_updated_label_set({ github, context }) {
   }
 
   // Always remove Test Merge Candidate
-  updated_labels.delete("Test Merge Candidate");
+  updated_labels.delete("Кандидат на ТМ");
 
   // Handle merge conflict label
   let merge_conflict = mergeable === false;

@@ -18,7 +18,7 @@ import { SearchBar } from './common/SearchBar';
 type Data = {
   categories: string[];
   features: Modpack[];
-  translations: Modpack[];
+  tweaks: Modpack[];
   reverts: Modpack[];
 };
 
@@ -38,7 +38,7 @@ export const Modpacks = (props) => {
     <Window title="Список модификаций" width={480} height={580}>
       <Window.Content>
         <NoticeBox>
-          В данный момент идёт наполнение меню модпаков, в игре модицикаций
+          В данный момент идёт наполнение меню модификаций, в игре модицикаций
           больше чем вы можете тут видеть.
         </NoticeBox>
         <Tabs>
@@ -46,23 +46,23 @@ export const Modpacks = (props) => {
             selected={selectedCategory === 'Features'}
             onClick={() => setSelectedCategory('Features')}
           >
-            Фичи и Приколы
+            Фичи и добавления
           </Tabs.Tab>
           <Tabs.Tab
-            selected={selectedCategory === 'Translations'}
-            onClick={() => setSelectedCategory('Translations')}
+            selected={selectedCategory === 'Tweaks'}
+            onClick={() => setSelectedCategory('Tweaks')}
           >
-            Переводы на Русский
+            Твики и доработки
           </Tabs.Tab>
           <Tabs.Tab
             selected={selectedCategory === 'Reverts'}
             onClick={() => setSelectedCategory('Reverts')}
           >
-            Балансы и Реверты
+            Откаты и баланс
           </Tabs.Tab>
         </Tabs>
         {(selectedCategory === 'Features' && <FeaturesTable />) ||
-          (selectedCategory === 'Translations' && <TranslationsTable />) ||
+          (selectedCategory === 'Tweaks' && <TweaksTable />) ||
           (selectedCategory === 'Reverts' && <RevertsTable />)}
       </Window.Content>
     </Window>
@@ -78,7 +78,7 @@ const FeaturesTable = () => {
   if (features.length === 0) {
     return (
       <NoticeBox>
-        Этот сервер не использует какие-либо прикольные Фичи
+        Этот сервер не использует какие-либо прикольные фичи
       </NoticeBox>
     );
   }
@@ -90,7 +90,7 @@ const FeaturesTable = () => {
           <SearchBar
             query={searchText}
             onSearch={setSearchText}
-            placeholder={'Искать модпак-фичу...'}
+            placeholder={'Искать модификацию...'}
           />
         </Section>
       </Stack.Item>
@@ -100,8 +100,8 @@ const FeaturesTable = () => {
           scrollable
           title={
             searchText.length > 0
-              ? `Результаты поиска "${searchText}"`
-              : `Суммарно модификаций — ${features.length}`
+              ? `Результаты поиска "${searchText}":`
+              : `Суммарно модификаций: ${features.length}`
           }
         >
           <Stack fill vertical>
@@ -161,13 +161,13 @@ const FeaturesTable = () => {
   );
 };
 
-const TranslationsTable = () => {
+const TweaksTable = () => {
   const { data } = useBackend<Data>();
-  const { translations } = data;
+  const { tweaks } = data;
 
   const [searchText, setSearchText] = useLocalState('searchText', '');
 
-  if (translations.length === 0) {
+  if (tweaks.length === 0) {
     return (
       <NoticeBox>
         Этот сервер не использует какие-либо переводы на Русский
@@ -182,7 +182,7 @@ const TranslationsTable = () => {
           <SearchBar
             query={searchText}
             onSearch={setSearchText}
-            placeholder={'Искать модпак-перевод...'}
+            placeholder={'Искать модификацию...'}
           />
         </Section>
       </Stack.Item>
@@ -193,12 +193,12 @@ const TranslationsTable = () => {
           title={
             searchText.length > 0
               ? `Результаты поиска "${searchText}":`
-              : `Суммарно модификаций — ${translations.length}`
+              : `Суммарно модификаций: ${tweaks.length}`
           }
         >
           <Stack fill vertical>
             <Stack.Item>
-              {translations
+              {tweaks
                 .filter(
                   (translate) =>
                     translate.name &&
@@ -276,7 +276,7 @@ const RevertsTable = () => {
           <SearchBar
             query={searchText}
             onSearch={setSearchText}
-            placeholder={'Искать модпак-скилл ишуя ТГ к*дера...'}
+            placeholder={'Искать модификацию...'}
           />
         </Section>
       </Stack.Item>
@@ -287,7 +287,7 @@ const RevertsTable = () => {
           title={
             searchText.length > 0
               ? `Результаты поиска "${searchText}":`
-              : `Суммарно модификаций — ${reverts.length}`
+              : `Суммарно модификаций: ${reverts.length}`
           }
         >
           <Stack fill vertical>

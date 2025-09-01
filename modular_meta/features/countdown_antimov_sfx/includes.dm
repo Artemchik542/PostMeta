@@ -2,9 +2,9 @@
 #include "code\countdown.dm"
 
 /datum/modpack/countdown_antimov_sfx
-	id = "COUNTDOWN"
+	id = "countdown_antimov_sfx"
 	icon = 'modular_meta/features/countdown_antimov_sfx/preview.dmi'
-	name = "Misc stuff"
+	name = "Countdown Antimov SFX"
 	group = "Features"
-	desc = "Добавляет звук ИИ-шке при получении набора законов «Антимов». А также музыку при объявлении войны и запуске ядерной боеголовки"
+	desc = "Добавляет звук ИИ при получении набора законов «Антимов». А также музыку при объявлении войны и запуске ядерной боеголовки"
 	author = "code by Bruh24, idea by piki.ta"

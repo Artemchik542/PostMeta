@@ -9,7 +9,7 @@
 	var/desc
 	/// A string with authors of this modpack.
 	var/author
-	/// A string with group of this modpack. Choose between "Features", "Translations" and "Reverts"
+	/// A string with group of this modpack. Choose between "Features", "Tweaks" and "Reverts"
 	var/group
 	/// A list of your modpack's dependencies. If you use obj from another modpack - put it here.
 	var/list/mod_depends = list()
@@ -58,9 +58,9 @@
 
 /datum/modpack/ui_static_data(mob/user)
 	. = ..()
-	.["categories"] = list("Features", "Translations", "Reverts")
+	.["categories"] = list("Features", "Tweaks", "Reverts")
 	.["features"] = list()
-	.["translations"] = list()
+	.["tweaks"] = list()
 	.["reverts"] = list()
 
 	var/datum/asset/spritesheet_batched/assets = get_asset_datum(/datum/asset/spritesheet_batched/modpacks)
@@ -78,9 +78,9 @@
 
 		if (modpack.group == "Фичи" || modpack.group == "Features")
 			.["features"] += list(modpack_data)
-		else if (modpack.group == "Переводы" || modpack.group == "Translations")
-			.["translations"] += list(modpack_data)
-		else if (modpack.group == "Балансы" || modpack.group == "Reverts")
+		else if (modpack.group == "Твики" || modpack.group == "Tweaks")
+			.["tweaks"] += list(modpack_data)
+		else if (modpack.group == "Откаты" || modpack.group == "Reverts")
 			.["reverts"] += list(modpack_data)
 		else
 			CRASH("Modpack [modpack.name] has bad group name or queued for deletion.")

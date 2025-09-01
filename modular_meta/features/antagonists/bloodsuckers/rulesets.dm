@@ -18,7 +18,7 @@
 	)
 
 /datum/dynamic_ruleset/roundstart/bloodsucker/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/sinfuldemon)
+	candidate.add_antag_datum(/datum/antagonist/bloodsucker)
 
 //////////////////////////////////////////////
 //                                          //
@@ -39,7 +39,7 @@
 	)
 
 /datum/dynamic_ruleset/midround/bloodsucker/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/sinfuldemon)
+	candidate.add_antag_datum(/datum/antagonist/bloodsucker)
 
 //////////////////////////////////////////////
 //                                          //
@@ -59,4 +59,4 @@
 	)
 
 /datum/dynamic_ruleset/latejoin/bloodsucker/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/sinfuldemon)
+	candidate.add_antag_datum(/datum/antagonist/bloodsucker)

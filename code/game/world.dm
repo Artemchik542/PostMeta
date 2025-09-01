@@ -452,6 +452,14 @@ GLOBAL_VAR(restart_counter)
 			features += "AI disabled"
 		hostedby = CONFIG_GET(string/hostedby)
 
+		//MASSMETA EDIT ADDITION BEGIN (tagline)
+		new_status += " ("
+		new_status += "<a href=\"[CONFIG_GET(string/discord_link)]\">"
+		new_status += "Discord"
+		new_status += ")\]"
+		new_status += "<br>[CONFIG_GET(string/servertagline)]<br>"
+		 //MASSMETA EDIT ADDITION END
+
 	if (CONFIG_GET(flag/station_name_in_hub_entry))
 		new_status += " &#8212; <b>[station_name()]</b>"
 

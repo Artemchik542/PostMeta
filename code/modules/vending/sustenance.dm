@@ -73,7 +73,7 @@
 			return
 	return ..()
 
-/obj/machinery/vending/sustenance/labor_camp/proceed_payment(obj/item/card/id/paying_id_card, mob/living/mob_paying, datum/data/vending_product/product_to_vend, price_to_use)
+/obj/machinery/vending/sustenance/labor_camp/proceed_payment(obj/item/card/id/advanced/prisoner/paying_scum_id, mob/living/mob_paying, datum/data/vending_product/product_to_vend, price_to_use)
 	if(!istype(paying_scum_id, /obj/item/card/id/advanced/prisoner))
 		//MASSMETA EDIT BEGIN (ru_vendors)
 		//speak("I don't take bribes! Pay with labor points!")
