@@ -5,6 +5,7 @@
 #include "code\bundle\crate.dm"
 #include "code\bundle\bundles.dm"
 #include "code\clothing\engset.dm"
+#include "code\justice_mecha.dm"
 
 /datum/modpack/uplink_items
 	id = "uplink_items"
