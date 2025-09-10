@@ -17,5 +17,5 @@
 	new /obj/item/reagent_containers/cup/bottle/coniine(src)
 	new /obj/item/reagent_containers/cup/bottle/curare(src)
 	new /obj/item/reagent_containers/cup/bottle/amanitin(src)
-	new /obj/item/reagent_containers/cup/bottle/toxin/novichok(src)
+	new /obj/item/reagent_containers/cup/bottle/novichok(src)
 	new /obj/item/reagent_containers/syringe(src)
