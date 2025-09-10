@@ -3,8 +3,9 @@
 #include "code\bottle.dm"
 
 /datum/modpack/novichok
-        id = "novichok"
-        name = "Новичок"
-        group = "Features"
-        desc = "Добавляет яд из СССР"
-        author = "DarkPush"
+	id = "novichok"
+	name = "Новичок"
+	group = "Features"
+	desc = "Добавляет яд из СССР"
+	author = "DarkPush"
+
