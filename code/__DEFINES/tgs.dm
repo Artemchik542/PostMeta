@@ -19,9 +19,6 @@
 
 // Required interfaces (fill in with your codebase equivalent):
 
-/// сру сюда !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#define DISCORD_OOC_CHANNEL_ID "1416761732122022020"
-
 /// Create a global variable named `Name` and set it to `Value`.
 #define TGS_DEFINE_AND_SET_GLOBAL(Name, Value)
 
