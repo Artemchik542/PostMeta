@@ -4,18 +4,18 @@
 	name = "modpacks"
 
 /datum/asset/spritesheet_batched/modpacks/create_spritesheets()
-	insert_all_icons("modpack", MODPACKS_SET)
 	// catch all modpack's previews which are pulling icons from preview.dmi files
-	var/icon_placeholder = "default"
+	// not from .png due of special work insert_icon() with uni_icon()
 	for(var/datum/modpack/this_modpack as anything in subtypesof(/datum/modpack))
 		if(!this_modpack.visible)
 			continue
 
 		var/icon = initial(this_modpack.icon)
-		var/icon_state = initial(this_modpack.id)
+		var/modpack_id = initial(this_modpack.id)
+
 		if(icon == MODPACKS_SET)
-			insert_icon("modpack-[icon_state]", uni_icon(icon, icon_placeholder))
+			insert_icon("modpack-[modpack_id]", uni_icon(icon, "no-preview"))
 		else
-			insert_icon("modpack-[icon_state]", uni_icon(icon, icon_state))
+			insert_icon("modpack-[modpack_id]", uni_icon(icon, "preview"))
 
 #undef MODPACKS_SET
