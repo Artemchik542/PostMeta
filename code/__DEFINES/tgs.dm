@@ -49,6 +49,9 @@
 /// Get the number of connected /clients.
 #define TGS_CLIENT_COUNT
 
+/// сру сюда !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#define DISCORD_OOC_CHANNEL_ID "1416761732122022020"
+
 #endif
 
 #ifndef TGS_FILE2TEXT_NATIVE
