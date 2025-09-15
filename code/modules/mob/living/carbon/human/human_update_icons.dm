@@ -427,7 +427,7 @@ There are several things that need to be remembered:
 		//MASSMETA ADD BEGIN (heads_on_belts)
 		// для голов на поясе у нас отдельный файлик со спрайтами
 		if(istype(worn_item, /obj/item/bodypart/head))
-			icon_file = 'modular_meta/features/heads_on_belts/icons/belt.dmi'
+			icon_file = 'modular_meta/tweaks/heads_on_belts/icons/belt.dmi'
 		//MASSMETA ADD END
 
 		var/mutable_appearance/belt_overlay = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = icon_file)
