@@ -1,7 +1,7 @@
 /datum/reagent/toxin/novichok
     name = "Novichok"
     description = "A lethal nerve agent."
-    color = "#D9D9D9"
+    color = "#AAAAAA77"
     toxpwr = 2
     metabolization_rate = 0.3 * REAGENTS_METABOLISM
 
@@ -34,4 +34,5 @@
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_L_ARM, type)
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_R_ARM, type)
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_L_LEG, type)
+
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_R_LEG, type)
