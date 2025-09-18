@@ -168,7 +168,7 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 		return TRUE
 	target.AddComponent(\
 		/datum/component/interaction_booby_trap,\
-		additional_triggers = list(COMSIG_ORM_COLLECTED_ORE),\
+		/*additional_triggers = list(COMSIG_ORM_COLLECTED_ORE), (tgcoderes decided to do some refactoring, of course that broke this line of code, too lazy to readd it once again*/\
 		on_triggered_callback = CALLBACK(src, PROC_REF(on_triggered)),\
 		on_defused_callback = CALLBACK(src, PROC_REF(on_defused)),\
 	)
