@@ -19,7 +19,6 @@
 	name = "Backstabing Knife"
 	desc = "Looking like basicaly folding knife, but have syndicate mark. \
 			Deals x4 damage bonus if you attack enemy from back."
-	population_minimum = TRAITOR_POPULATION_LOWPOP
 	item = /obj/item/switchblade/backstab
 
 	cost = 10
@@ -44,3 +43,39 @@
 	Small note from Gorlex's engineers: use with poison kit to achieve best effect!"
 	cost = 8
 	item = /obj/item/knife/poison
+
+//Spy unique items. \
+	In pr #92481 some few cool spy items were added, since spy is a quite disliked antagonist out here, \
+	usually being either exchanged for an regular traitor or rather disabled by admins completely, we're going to add his items here. \
+	editing whole category "spy_unique" would cause some issues, due it having rocket launcher, bulldog shotgun and other quite impressive items.\
+	Genuinely, you do not want a traitor running around with an rocket launcher killing people \
+	So, what're we going to do, is to add all the funny items down here one by one.
+
+//stealthy category
+/datum/uplink_item/stealthy_weapons/daggerboot
+	name = "Boot Dagger"
+	desc = "A pair of boots with a dagger embedded into the sole. Kicks with these will stab the target, potentially causing bleeding."
+	item = /obj/item/clothing/shoes/jackboots/dagger
+	cost = 4
+
+//role_restricted catergory
+/datum/uplink_item/role_restricted/monster_cube_box
+	name = "Monster cube box"
+	desc = "A box containing a bunch of random monster cubes. Add water and see what you get!"
+	item = /obj/item/storage/box/monkeycubes/random
+	cost = 12
+	restricted_roles = list(JOB_SCIENTIST, JOB_CLOWN, JOB_RESEARCH_DIRECTOR, JOB_CHIEF_MEDICAL_OFFICER)
+
+//dangerous category
+/datum/uplink_item/dangerous/spider_bite_martial_arts
+	name = "Spider-bite Martial Arts Scroll"
+	desc = "A scroll teaching you the basics of the Spider Bite martial art."
+	item = /obj/item/book/granter/martial/spider_bite
+	cost = 10 // seems balanced to me.
+
+/datum/uplink_item/dangerous/nunchaku
+	name = "Syndie Fitness Nunchuks"
+	desc = "Heavyweight titanium nunchucks, quickly knocking opponents to the ground, then just as easily smashing the opponent afterward."
+	item = /obj/item/melee/baton/nunchaku
+	cost = 12
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND

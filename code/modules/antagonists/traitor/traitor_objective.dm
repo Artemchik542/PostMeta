@@ -42,8 +42,6 @@
 	var/progression_cost_coeff = 0
 	/// The percentage that this objective has been increased or decreased by as a result of progression. Used by the UI
 	var/original_progression = 0
-	/// Abstract type that won't be included as a possible objective
-	var/abstract_type = /datum/traitor_objective
 	/// The duplicate type that will be used to check for duplicates.
 	/// If undefined, this will either take from the abstract type or the type of the objective itself
 	var/duplicate_type = null
