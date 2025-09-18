@@ -1,9 +1,9 @@
 /datum/reagent/toxin/novichok
     name = "Novichok"
     description = "A lethal nerve agent."
-    color = "#D9D9D9"
+    color = "#AAAAAA77"
     toxpwr = 2
-    metabolization_rate = 0.3 * REAGENTS_METABOLISM
+    metabolization_rate = 0.7 * REAGENTS_METABOLISM
 
 /datum/reagent/toxin/novichok/proc/pick_paralyzed_limb()
     return pick(TRAIT_PARALYSIS_L_ARM, TRAIT_PARALYSIS_R_ARM, TRAIT_PARALYSIS_R_LEG, TRAIT_PARALYSIS_L_LEG)
@@ -34,4 +34,6 @@
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_L_ARM, type)
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_R_ARM, type)
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_L_LEG, type)
+
     REMOVE_TRAIT(M, TRAIT_PARALYSIS_R_LEG, type)
+
