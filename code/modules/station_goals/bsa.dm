@@ -7,7 +7,7 @@ GLOBAL_VAR_INIT(bsa_unlock, FALSE)
 // Requires high amount of power
 // Requires high level stock parts
 /datum/station_goal/bluespace_cannon
-	name = "Bluespace Artillery"
+	name = "Блюспейс артиллерия" //MASSMETA TRANSLATION
 
 /datum/station_goal/bluespace_cannon/get_report()
 	return list(

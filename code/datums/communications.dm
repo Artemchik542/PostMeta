@@ -141,15 +141,15 @@ GLOBAL_DATUM_INIT(communications_controller, /datum/communciations_controller, n
 			SSsecurity_level.set_level(SEC_LEVEL_BLUE, announce = FALSE)
 		priority_announce(
 			"[SSsecurity_level.current_security_level.elevating_to_announcement]\n\n\
-				A summary has been copied and printed to all communications consoles.",
-			"Security level elevated.",
+				Поступил отчет, что будет распечатан на всех консолях связи.", //MASSMETA TRANSLATION
+			"Уровень угрозы поднят.", //MASSMETA TRANSLATION
 			ANNOUNCER_INTERCEPT,
 			color_override = SSsecurity_level.current_security_level.announcement_color,
 		)
 	else
 		priority_announce(
-			"A summary of the station's situation has been copied and printed to all communications consoles.",
-			"Security Report",
+			"Поступил отчет о ситуации на станции, что будет распечатан на всех консолях связи.", //MASSMETA TRANSLATION
+			"Отчет о безопасности", //MASSMETA TRANSLATION
 			SSstation.announcer.get_rand_report_sound(),
 		)
 

@@ -20,20 +20,20 @@
 	announce_when = 2
 
 /datum/round_event/market_crash/announce(fake)
-	var/list/poss_reasons = list("the alignment of the moon and the sun",\
-		"some risky housing market outcomes",\
-		"the B.E.P.I.S. team's untimely downfall",\
-		"speculative Terragov grants backfiring",\
-		"greatly exaggerated reports of Nanotrasen accountancy personnel being \"laid off\"",\
-		"a \"great investment\" into \"non-fungible tokens\" by a \"moron\"",\
-		"a number of raids from Tiger Cooperative agents",\
-		"supply chain shortages",\
-		"the \"Nanotrasen+\" social media network's untimely downfall",\
-		"the \"Nanotrasen+\" social media network's unfortunate success",\
-		"uhh, bad luck, we guess"
+	var/list/poss_reasons = list("астрологи объявили неделю антихалявы",\ //MASSMETA TRANSLATION
+		"наномашины возбудились",\
+		"все поел долгоносик",\
+		"в параллельной вселенной все подешевело",\
+		"кто-то ограбил космические корованы",\
+		"обновление прошивки пошло не по плану",\
+		"ради баланса вселенной и всего такого",\
+		"мамкин криптотрейдер ультанут",\
+		"выяснилось наглое нарушение авторских прав",\
+		"дочерняя компания Nanotrasen объявила дефолт",\
+		"у кого-то произошли проблемы с навыком"
 	)
 	var/reason = pick(poss_reasons)
-	priority_announce("Due to [reason], prices for on-station vendors will be increased for a short period.", "Nanotrasen Accounting Division")
+	priority_announce("В связи с тем что [reason] - цена на продукцию в вендинговых автоматах станции будет временно увеличена.", "Бухгалтерский отдел Nanotrasen") //MASSMETA TRANSLATION
 
 /datum/round_event/market_crash/start()
 	. = ..()
@@ -46,7 +46,7 @@
 	REMOVE_TRAIT(SSeconomy, TRAIT_MARKET_CRASHING, MARKET_CRASH_EVENT_TRAIT)
 	SSeconomy.price_update()
 	SSeconomy.update_vending_prices()
-	priority_announce("Prices for on-station vendors have now stabilized.", "Nanotrasen Accounting Division")
+	priority_announce("Цены в вендинговых автоматах на станции в настоящее время стабилизировались.", "Бухгалтерский отдел Nanotrasen") //MASSMETA TRANSLATION
 
 /datum/round_event/market_crash/tick()
 	. = ..()
