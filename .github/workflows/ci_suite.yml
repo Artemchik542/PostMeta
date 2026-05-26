@@ -72,12 +72,10 @@ jobs:
   completion_gate: # Serves as a non-moving target for branch rulesets
     if: always() && !cancelled()
     name: Completion Gate
-    needs: [
+    needs:
+      [
         compare_screenshots,
         compile_all_maps,
-        - we need ts fixed,
-        so we doesn't include it,
-        for now
         run_all_tests,
         run_alternate_tests,
         run_linters,
