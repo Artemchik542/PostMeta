@@ -73,7 +73,6 @@
 #include "tweaks\better_ui\includes.dm"
 #include "tweaks\del_required_experiments\includes.dm"
 #include "tweaks\fonts\includes.dm"
-#include "tweaks\resprite\includes.dm"
 #include "tweaks\russian_translation\includes.dm"
 #include "tweaks\gases\includes.dm"
 #include "tweaks\heads_on_belts\includes.dm"
