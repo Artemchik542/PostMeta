@@ -4,6 +4,7 @@
 	worn_icon = 'modular_meta/features/butt_farts/icons/worn_butts.dmi' //Wearable on the head
 	icon = 'modular_meta/features/butt_farts/icons/butts.dmi'
 	icon_state = "ass"
+	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_BUTT
 	throw_speed = 1
@@ -22,6 +23,7 @@
 	var/fart_instability = 1 //Percent chance to lose your rear each fart.
 	var/cooling_down = FALSE
 
+	food_reagents = list(/datum/reagent/consumable/nutriment/organ_tissue = 2.5, /datum/reagent/consumable/nutriment = 2.5)
 
 /datum/embedding/butt
 	pain_mult = 0
