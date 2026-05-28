@@ -23,7 +23,10 @@
 	var/fart_instability = 1 //Percent chance to lose your rear each fart.
 	var/cooling_down = FALSE
 
+/obj/item/organ/internal/butt/Initialize()
+	. = ..()
 	food_reagents = list(/datum/reagent/consumable/nutriment/organ_tissue = 2.5, /datum/reagent/consumable/nutriment = 2.5)
+	AddComponent(/datum/component/edible, initial_reagents = food_reagents)
 
 /datum/embedding/butt
 	pain_mult = 0
