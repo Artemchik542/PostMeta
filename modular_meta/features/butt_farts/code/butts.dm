@@ -4,7 +4,7 @@
 	worn_icon = 'modular_meta/features/butt_farts/icons/worn_butts.dmi' //Wearable on the head
 	icon = 'modular_meta/features/butt_farts/icons/butts.dmi'
 	icon_state = "ass"
-	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
+	organ_flags = ORGAN_ORGANIC | ORGAN_VIRGIN | ORGAN_EXTERNAL
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_BUTT
 	throw_speed = 1
