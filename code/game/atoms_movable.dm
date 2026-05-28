@@ -1151,12 +1151,6 @@
 	SET_ACTIVE_MOVEMENT(oldloc, NONE, TRUE, null)
 
 	if(destination)
-		//MASSMETA ADDITION (runtimes fix)
-		if(loc == destination)
-			return FALSE
-		if(destination in src.contents)
-			return FALSE
-		//MASSMETA ADDITION END
 		///zMove already handles whether a pull from another movable should be broken.
 		if(pulledby && !currently_z_moving)
 			pulledby.stop_pulling()
