@@ -88,8 +88,6 @@
 	ADD_TRAIT(src, TRAIT_ANOSMIA, INNATE_TRAIT)
 	RegisterSignal(src, COMSIG_LIVING_ELECTROCUTE_ACT, PROC_REF(on_silicon_shocked))
 
-	return INITIALIZE_HINT_NORMAL //MASSMETA ADDITION (runtimes fix)
-
 /mob/living/silicon/Destroy()
 	QDEL_NULL(radio)
 	QDEL_NULL(aicamera)
