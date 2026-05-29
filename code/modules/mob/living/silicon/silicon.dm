@@ -55,7 +55,7 @@
 	. = ..()
 	//MASSMETA ADDITION (runtimes fix)
 	if(. == INITIALIZE_HINT_QDEL)
-		return
+		return .
 	//MASSMETA ADDITION END
 	voice = SStts.random_tts_voice()
 	GLOB.silicon_mobs += src
