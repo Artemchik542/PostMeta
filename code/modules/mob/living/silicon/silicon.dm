@@ -52,11 +52,8 @@
 
 
 /mob/living/silicon/Initialize(mapload)
-	//MASSMETA EDIT (runtimes fix) ORIGINAL: . = ..()
-	var/init_hint = ..()
-	if(. == INITIALIZE_HINT_QDEL)
-		return .
-	//MASSMETA EDIT END
+	. = ..()
+
 	voice = SStts.random_tts_voice()
 	GLOB.silicon_mobs += src
 	add_faction(FACTION_SILICON)
@@ -87,8 +84,6 @@
 	ADD_TRAIT(src, TRAIT_SILICON_EMOTES_ALLOWED, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_ANOSMIA, INNATE_TRAIT)
 	RegisterSignal(src, COMSIG_LIVING_ELECTROCUTE_ACT, PROC_REF(on_silicon_shocked))
-
-	return init_hint
 
 /mob/living/silicon/Destroy()
 	QDEL_NULL(radio)
