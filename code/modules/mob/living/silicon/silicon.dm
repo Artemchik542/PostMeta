@@ -53,7 +53,6 @@
 
 /mob/living/silicon/Initialize(mapload)
 	. = ..()
-
 	voice = SStts.random_tts_voice()
 	GLOB.silicon_mobs += src
 	add_faction(FACTION_SILICON)
