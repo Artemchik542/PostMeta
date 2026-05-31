@@ -80,3 +80,4 @@
 #include "tweaks\lgbt_removal\includes.dm"
 #include "tweaks\tagline\includes.dm"
 #include "tweaks\simple_vote_by_default\includes.dm"
+#include "tweaks\runtimes_fix\includes.dm"
