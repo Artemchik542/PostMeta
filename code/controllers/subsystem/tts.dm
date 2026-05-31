@@ -193,6 +193,11 @@ SUBSYSTEM_DEF(tts)
 		computer_voice = CONFIG_GET(string/tts_computer_voice_override)
 	else
 		computer_voice = pick(available_speakers)
+	// MASSMETA EDIT START (ntts && /tg/tts)
+	if(CONFIG_GET(string/centcom_voice))
+		set_announcement_voices()
+	// MASSMETA EDIT END (ntts && /tg/tts)
+
 	var/datum/http_request/request_pitch = new()
 	var/list/headers_pitch = list()
 	headers_pitch["Authorization"] = CONFIG_GET(string/tts_http_token)
