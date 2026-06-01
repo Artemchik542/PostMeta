@@ -344,6 +344,11 @@ There are several things that need to be remembered:
 		var/icon_file = 'icons/mob/clothing/belt.dmi'
 
 		var/mutable_appearance/belt_overlay = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = icon_file, bodyshape = bodyshape)
+		//MASSMETA ADD BEGIN (heads_on_belts)
+		// для голов на поясе у нас отдельный файлик со спрайтами
+		if(istype(worn_item, /obj/item/bodypart/head))
+			icon_file = 'modular_meta/tweaks/heads_on_belts/icons/belt.dmi'
+		//MASSMETA ADD END
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_belt_offset?.apply_offset(belt_overlay)
 		overlays_standing[BELT_LAYER] = belt_overlay

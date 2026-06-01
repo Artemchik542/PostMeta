@@ -11944,6 +11944,9 @@
 /area/station/command/heads_quarters/rd)
 "dnk" = (
 /obj/structure/dresser,
+/obj/effect/spawner/random/decoration/lavalamp{
+	pixel_y = 16
+	},
 /turf/open/floor/carpet,
 /area/station/commons/dorms)
 "dnn" = (
@@ -22525,6 +22528,7 @@
 /obj/item/wrench{
 	pixel_y = 17
 	},
+/obj/effect/spawner/random/decoration/lavalamp,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "grD" = (
@@ -25209,6 +25213,7 @@
 	pixel_x = 5;
 	pixel_y = -24
 	},
+/mob/living/silicon/robot/shell/cell,
 /turf/open/floor/circuit,
 /area/station/ai/satellite/chamber)
 "hfZ" = (
@@ -35528,6 +35533,7 @@
 	id = "AI";
 	pixel_x = -10
 	},
+/mob/living/silicon/robot/shell/cell,
 /turf/open/floor/circuit,
 /area/station/ai/satellite/chamber)
 "kfS" = (
@@ -38990,6 +38996,7 @@
 "lcB" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/table/wood,
+/obj/effect/spawner/random/decoration/lavalamp,
 /turf/open/floor/carpet,
 /area/station/commons/dorms)
 "lcY" = (
@@ -49831,6 +49838,7 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/vending/mod_modules,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "ofl" = (
@@ -61416,6 +61424,7 @@
 /area/station/ai/satellite/interior)
 "rlV" = (
 /obj/structure/table/wood,
+/obj/effect/spawner/random/decoration/lavalamp,
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "rmn" = (
@@ -65666,6 +65675,9 @@
 "svH" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/dresser,
+/obj/effect/spawner/random/decoration/lavalamp{
+	pixel_y = 16
+	},
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "svN" = (
@@ -80096,6 +80108,7 @@
 /obj/machinery/light/small/directional/west,
 /obj/structure/table/wood,
 /obj/effect/landmark/start/hangover,
+/obj/effect/spawner/random/decoration/lavalamp,
 /turf/open/floor/carpet,
 /area/station/commons/dorms)
 "wIC" = (
