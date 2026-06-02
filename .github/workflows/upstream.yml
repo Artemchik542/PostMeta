@@ -26,6 +26,7 @@ jobs:
           git fetch upstream master:update
           git checkout update
           git branch --set-upstream-to=upstream/master update
+          git config --global user.name "upstream-o-tron-3000[bot]"
           git commit -m 'Merge Upstream'
           git push -f -u origin update
 
