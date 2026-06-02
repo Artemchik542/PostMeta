@@ -73,7 +73,6 @@
 #include "tweaks\better_ui\includes.dm"
 #include "tweaks\del_required_experiments\includes.dm"
 #include "tweaks\fonts\includes.dm"
-#include "tweaks\resprite\includes.dm"
 #include "tweaks\russian_translation\includes.dm"
 #include "tweaks\gases\includes.dm"
 #include "tweaks\heads_on_belts\includes.dm"
@@ -81,3 +80,4 @@
 #include "tweaks\lgbt_removal\includes.dm"
 #include "tweaks\tagline\includes.dm"
 #include "tweaks\simple_vote_by_default\includes.dm"
+#include "tweaks\runtimes_fix\includes.dm"
