@@ -26,7 +26,6 @@ jobs:
           git fetch upstream master:update
           git checkout update
           git branch --set-upstream-to=upstream/master update
-          git checkout -b upstream_pr update
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
