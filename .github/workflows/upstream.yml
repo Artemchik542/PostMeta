@@ -26,7 +26,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: upstream-updates
+          branch: upstream_pr
           base: master
           title: "Upstream"
           body: "
