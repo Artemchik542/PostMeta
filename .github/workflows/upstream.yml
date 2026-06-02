@@ -30,7 +30,7 @@ jobs:
           git push -f -u origin update
 
       - name: Create Pull Request
-        id:
+        id: create_pr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ steps.generate-token.outputs.token }}
