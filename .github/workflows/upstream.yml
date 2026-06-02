@@ -17,7 +17,7 @@ jobs:
 
       - name: Set current date
         id: date_step
-        run: echo "time=$(date '+%F')" >> $GITHUB_OUTPUT
+        run: echo "TZ=Europe/Moscow time=$(date '+%F')" >> $GITHUB_OUTPUT
 
       - name: Checkout Fork
         uses: actions/checkout@v4
