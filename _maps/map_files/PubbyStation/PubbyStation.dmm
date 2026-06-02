@@ -224,7 +224,6 @@
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/structure/sign/departments/aisat/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/command/emergency_closet)
 "aba" = (
@@ -3889,6 +3888,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "apR" = (
@@ -5244,7 +5244,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/obj/effect/landmark/firealarm_sanity,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "auK" = (
@@ -8240,6 +8240,7 @@
 /obj/machinery/light/small/directional/east,
 /obj/machinery/newscaster/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/plating,
 /area/station/commons/storage/emergency/starboard)
 "aFK" = (
@@ -15476,15 +15477,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
-"bmb" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/obj/machinery/firealarm/directional/west,
-/turf/open/floor/iron/dark,
-/area/station/security/processing/cremation)
 "bmh" = (
 /obj/structure/table,
 /obj/item/reagent_containers/cup/beaker/cryoxadone{
@@ -29319,6 +29311,14 @@
 	},
 /turf/open/floor/iron/white/corner,
 /area/station/hallway/secondary/exit/departure_lounge)
+"dvn" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/landmark/start/hangover,
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central/fore)
 "dvR" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -29662,11 +29662,6 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
-"dMW" = (
-/obj/structure/cable,
-/obj/machinery/firealarm/directional/south,
-/turf/open/floor/iron,
-/area/station/hallway/primary/fore)
 "dNr" = (
 /obj/structure/sign/warning/directional/south,
 /obj/machinery/power/shieldwallgen/xenobiologyaccess,
@@ -33892,7 +33887,6 @@
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/structure/sign/departments/aisat/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/emergency_closet)
 "hnu" = (
@@ -35792,6 +35786,10 @@
 	dir = 1
 	},
 /area/station/hallway/secondary/exit/departure_lounge)
+"jaA" = (
+/obj/effect/landmark/firealarm_sanity,
+/turf/open/space/basic,
+/area/space)
 "jaK" = (
 /obj/structure/closet/secure_closet/chief_medical,
 /obj/effect/turf_decal/tile/blue{
@@ -40577,14 +40575,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"ncX" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/landmark/start/hangover,
-/obj/machinery/firealarm/directional/north,
-/turf/open/floor/iron,
-/area/station/hallway/primary/central/fore)
 "nda" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -41141,6 +41131,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/service/chapel/storage)
+"nxR" = (
+/obj/effect/landmark/firealarm_sanity,
+/turf/open/floor/engine{
+	name = "Holodeck Projector Floor"
+	},
+/area/station/holodeck/rec_center)
 "nyB" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -41447,6 +41443,11 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/engine,
 /area/station/engineering/atmos/hfr_room)
+"nJT" = (
+/obj/structure/cable,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron,
+/area/station/hallway/primary/fore)
 "nKa" = (
 /obj/machinery/airalarm/directional/west,
 /obj/structure/closet/firecloset,
@@ -41867,12 +41868,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/central)
-"obi" = (
-/obj/effect/landmark/firealarm_sanity,
-/turf/open/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/station/holodeck/rec_center)
 "obj" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/cable,
@@ -44491,6 +44486,7 @@
 "qbZ" = (
 /obj/structure/rack,
 /obj/item/clothing/mask/gas,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/plating,
 /area/station/commons/storage/emergency/starboard)
 "qcb" = (
@@ -44818,17 +44814,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
-"qmc" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/structure/cable,
-/obj/machinery/firealarm/directional/south,
-/turf/open/floor/iron/dark,
-/area/station/service/chapel/funeral)
 "qmm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -45096,6 +45081,15 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
+"qvu" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/security/processing/cremation)
 "qvx" = (
 /obj/item/kirbyplants/organic/plant21,
 /obj/machinery/light/small/directional/north,
@@ -51213,6 +51207,17 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
+"uYv" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/service/chapel/funeral)
 "uYF" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -61902,7 +61907,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+jaA
 aaa
 aaa
 aaa
@@ -68416,7 +68421,7 @@ cve
 slf
 oQn
 fdl
-qmc
+uYv
 slf
 slf
 slf
@@ -74467,7 +74472,7 @@ aiZ
 ajH
 akx
 alY
-bmb
+qvu
 amI
 ueU
 ueU
@@ -77566,7 +77571,7 @@ avv
 uUY
 aAm
 qNG
-dMW
+nJT
 aBd
 aCi
 eIY
@@ -88625,7 +88630,7 @@ aEL
 aAH
 aGt
 axi
-ncX
+dvn
 ilz
 fei
 aKZ
@@ -98123,7 +98128,7 @@ aiS
 aur
 aur
 aur
-obi
+nxR
 aur
 aur
 aur
