@@ -26,12 +26,18 @@ jobs:
           git fetch upstream master:update
           git checkout update
           git branch --set-upstream-to=upstream/master update
+          git commit -m 'Merge Upstream'
+          git push -f -u origin update
 
       - name: Create Pull Request
+        id:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          branch: upstream_pr
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          branch: update
+          delete-branch: true
           base: master
           title: "Upstream"
           body: "
