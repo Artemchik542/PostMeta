@@ -1,0 +1,35 @@
+﻿name: Upstream Sync
+
+on:
+  schedule:
+    - cron: '* 17 * * 3'
+  workflow_dispatch:
+
+jobs:
+  sync-upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch Upstream Changes
+        run: |
+          git remote add upstream https://github.com/tgstation/tgstation
+          git fetch upstream master:update
+          git checkout update
+          git branch --set-upstream-to=upstream/master update
+          git checkout -b upstream_pr update
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: upstream-updates
+          base: master
+          title: "Upstream"
+          body: "
+          🆑 MassMeta
+          add: Upstream
+          /:cl:"
