@@ -10895,7 +10895,7 @@
 /area/centcom/tdome/administration)
 "Kj" = (
 /obj/structure/table/reinforced,
-/obj/item/ammo_box/magazine/r10mm,
+/obj/item/ammo_box/magazine/r45,
 /obj/item/gun/ballistic/automatic/pistol/deagle/regal,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
