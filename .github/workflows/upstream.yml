@@ -40,7 +40,4 @@ jobs:
           delete-branch: true
           base: master
           title: "Upstream"
-          body: "
-          🆑 MassMeta
-          add: Upstream
-          /:cl:"
+          body: "🆑 MassMeta\n add: Upstream\n /:cl:"
