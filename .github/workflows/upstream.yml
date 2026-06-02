@@ -26,6 +26,8 @@ jobs:
           git fetch upstream master
           git checkout master
           git merge upstream/master
+          git config user.name "upstream-o-tron-3000[bot]"
+          git config user.email "179393467+upstream-o-tron-3000[bot]@users.noreply.github.com"
 
       - name: Create Pull Request
         id: create_pr
