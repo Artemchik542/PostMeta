@@ -15,6 +15,11 @@
   - balance: The RNG instant kill via organ removal of the mech drill has been removed,
       and replaced with a very high wounding chance
 2026-06-02:
+  Fghj240:
+  - bugfix: Cybernetic cat ears can no longer be restyled with flesh reshapers (because
+      it broke them)
+  Hatterhat:
+  - bugfix: Bileworm spewlet trophies no longer spit bullets instead of acidic bile.
   Iajret:
   - bugfix: Mending touch works once again
   Melbert:
@@ -49,3 +54,41 @@
   - code_imp: Repathed Liberators. This has no bearing on their function.
   - code_imp: Rechambers Regal Condors in .45 and 10mm Reaper rounds to .45 Reaper
       rounds. This has no impact on their function.
+2026-06-03:
+  FalloutFalcon:
+  - bugfix: Stumps aren't see through
+  Hatterhat:
+  - bugfix: Stasis body bags are no longer dense when closed.
+  - spellcheck: Fixed a typo relating to the spelling of "cinched" in body bags with
+      buckles (prisoner bags, et cetera).
+  Macaroni:
+  - qol: The alt jester outfit now has grayscale and is buyable
+  StrangeWeirdKitten:
+  - bugfix: Blobs can no longer destroy indestructible items, like the disk.
+  levels0:
+  - bugfix: random recipes can no longer have upper pH bound above 14
+  timothymtorres:
+  - spellcheck: Add security misspelling checks to CI
+2026-06-04:
+  Arturlang:
+  - bugfix: moonatics switching bodies (including slimeperson swap) giving you duplicate
+      action buttons
+  - bugfix: lock path not having 1 point discounts
+  Frfor17:
+  - bugfix: fixed NT shop printing infiniti papers, now its linked to computer's(laptop,
+      pda, any) paper storage
+  QuiteLiterallyAnything:
+  - bugfix: Made discounts from toxins papers show up in research UIs properly.
+  - refactor: Refactored research techwebs such that toxins discounts are now stored
+      per techweb node rather than per techweb.
+  SmArtKar:
+  - bugfix: Fixed brimdust overlay on wide mobs leaking onto other objects
+  - bugfix: Drake swoop no longer misleadingly claims you fall into lava if it fails
+      to spawn said lava
+  Wisemonster:
+  - code_imp: Wizard Apprentices now use the mid-round wizard pref, instead of the
+      round start wizard pref.
+  lelandkemble:
+  - bugfix: Material spears no longer partially avoid the force malus from being unwielded
+  - balance: Smartfridges no longer block atmos when broken & no longer let creatures
+      pass until broken
