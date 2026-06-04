@@ -72841,13 +72841,11 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
-<<<<<<< HEAD
 "rVM" = (
-/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/engine,
-/area/station/engineering/supermatter)
-=======
->>>>>>> upstream/master
+/area/station/engineering/supermatter/engine)
 "rVX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -119854,7 +119852,7 @@ gAw
 aVW
 lbl
 aoe
-pRY
+rVM
 aTP
 prc
 pmA
