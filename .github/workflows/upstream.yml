@@ -29,16 +29,23 @@ jobs:
           git remote add upstream https://github.com/tgstation/tgstation
           git fetch upstream master
           git checkout master
-          git config user.name "upstream-o-tron-3000"
-          git config user.email "179393467+upstream-o-tron-3000@users.noreply.github.com"
-          git merge upstream/master
+          git config user.name "mass-bot"
+          git config user.email "179393467+mass-bot@users.noreply.github.com"
+          set +e
+          git merge --no-edit upstream/master
+          merge=$?
+          set -e
+          if [ "$merge" -ne "0" ]; then
+            git add -A
+            git commit -m "merge upstream/master w conflicts"
+          fi
 
       - name: Create Pull Request
         id: create_pr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          committer: upstream-o-tron-3000 <179393467+upstream-o-tron-3000@users.noreply.github.com>
+          committer: mass-bot <179393467+mass-bot@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           branch: upstream
           delete-branch: true
