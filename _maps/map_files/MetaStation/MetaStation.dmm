@@ -35729,17 +35729,11 @@
 /obj/structure/cable/layer3,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/exterior)
-<<<<<<< HEAD
 "mkr" = (
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 4;
-	name = "Gas to Chamber"
-	},
-/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/engine,
-/area/station/engineering/supermatter)
-=======
->>>>>>> upstream/master
+/area/station/engineering/supermatter/engine)
 "mkz" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/item/hand_labeler_refill,
@@ -114519,7 +114513,7 @@ eOz
 stX
 nlX
 iHO
-ibV
+mkr
 uie
 mID
 xUg
