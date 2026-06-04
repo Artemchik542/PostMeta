@@ -1,6 +1,12 @@
 /datum/config_entry/string/centcom_voice
 
 /atom/movable
+	/// there are:
+	/// * "centcom",
+	/// * "captain",
+	/// * "syndicate",
+	/// * "radio_machine" - (that one should be removed lol?)
+	/// * "request_console" - (that one too?)
 	var/tts_announcement_effect
 
 /obj/machinery/announcement_system
@@ -169,11 +175,17 @@
 /datum/tts_request/proc/announcement_requests_completed()
 	return request.is_complete()
 
+/datum/preference/numeric/volume/announcement_tts_volume
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "announcement_tts_volume"
+	savefile_identifier = PREFERENCE_PLAYER
+
 /datum/tts_request/proc/play_announcement()
 	for(var/mob/listener as anything in announcement_listeners)
 		if(!SStts.can_hear_announcement_tts(listener))
 			continue
-		var/volume = listener.client.prefs.read_preference(/datum/preference/numeric/volume/sound_tts_volume)
+		//var/volume = listener.client.prefs.read_preference(/datum/preference/numeric/volume/sound_tts_volume)
+		var/volume = listener.client.prefs.read_preference(/datum/preference/numeric/volume/announcement_tts_volume)
 		if(!volume)
 			continue
 		var/sound/audio = sound(audio_file)
