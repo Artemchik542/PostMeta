@@ -25,6 +25,7 @@ jobs:
           fetch-depth: 0
 
       - name: Fetch Upstream Changes
+        id: fetch_upstream
         run: |
           git remote add upstream https://github.com/tgstation/tgstation
           git fetch upstream master
@@ -36,6 +37,11 @@ jobs:
           merge=$?
           set -e
           if [ "$merge" -ne "0" ]; then
+            conflicts="$(git diff --name-only --diff-filter=U)"
+            {
+            echo "conflicts:"
+            echo "$conflicts"
+            } >> $GITHUB_OUTPUT
             git add -A
             git commit -m "merge upstream/master w conflicts"
           fi
@@ -51,4 +57,4 @@ jobs:
           delete-branch: true
           base: master
           title: "Upstream ${{ steps.date_step.outputs.time }}"
-          body: "🆑 MassMeta\n add: Upstream ${{ steps.date_step.outputs.time }}\n /:cl:"
+          body: "🆑 MassMeta\n add: Upstream ${{ steps.date_step.outputs.time }}\n /:cl: \n ${{ steps.fetch_upstream.outputs.conflicts }}"
