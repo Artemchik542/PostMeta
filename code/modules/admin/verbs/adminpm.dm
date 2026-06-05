@@ -379,6 +379,11 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 		// Full boinks will always be done to players, so we are not guarenteed that they won't have a ticket
 		if(!recipient_ticket)
 			new /datum/admin_help(send_message, recipient, TRUE)
+
+			// MASSMETA EDIT START
+			get_ticket_info(send_message, recipient.current_ticket.id, recipient.ckey, admin = TRUE, new_ticket = TRUE, engager = "admin")
+			// MASSMETA EDIT END
+
 			already_logged = TRUE
 			// This action mutates our existing cached ticket information, so we recache
 			ticket = current_ticket
@@ -489,6 +494,11 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 		confidential = TRUE)
 
 	ticket.reply_to_admins_notification(send_message)
+
+	// MASSMETA EDIT START
+	get_ticket_info(send_message, ticket_id, ckey, admin = false, new_ticket = FALSE, engager = "player")
+	// MASSMETA EDIT END
+
 	SSblackbox.LogAhelp(ticket_id, "Reply", send_message, recip_ckey, our_ckey)
 
 	return TRUE
