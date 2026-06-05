@@ -1,5 +1,3 @@
-/datum/world_topic/
-
 /// * Message - the message itself
 /// * ID - ticket's ID
 /// * Ckey - ckey of the person who sent the message
@@ -22,4 +20,4 @@
 		"round_id" = GLOB.round_id
 	)
 
-	GLOB.bot_event_sending_que += processed_message
+	GLOB.bot_event_sending_que += list(processed_message)
