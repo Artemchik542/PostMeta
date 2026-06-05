@@ -210,7 +210,7 @@
 			else
 				to_chat(user, span_notice("You close the access panel."))
 			return
-		else if(default_deconstruction_crowbar(O))
+		else if(default_deconstruction_crowbar(user, O))
 			return
 	return ..()
 

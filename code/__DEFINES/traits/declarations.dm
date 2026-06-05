@@ -220,8 +220,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NO_BLOOD_OVERLAY "no_blood_overlay"
 /// Humans with this trait cannot have underwear
 #define TRAIT_NO_UNDERWEAR "no_underwear"
-/// This carbon doesn't show an overlay when they have no brain
-#define TRAIT_NO_DEBRAIN_OVERLAY "no_debrain_overlay"
 /// Humans with this trait cannot get augmentation surgery
 #define TRAIT_NO_AUGMENTS "no_augments"
 /// This carbon doesn't get hungry
@@ -1041,6 +1039,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_SETTLER "settler"
 #define TRAIT_STRONG_STOMACH "strong_stomach"
 #define TRAIT_VEGETARIAN "trait_vegetarian"
+#define TRAIT_KEEN_NOSE "keen_nose"
 //MASSMETA ADD BEGIN (butt_farts)
 //Butt traits for quirks
 #define TRAIT_LOUD_ASS "loud_ass"
@@ -1227,9 +1226,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Trait given to a dreaming carbon when they are currently doing dreaming stuff
 #define TRAIT_DREAMING "currently_dreaming"
 
-/// Trait that allows non-heretics to have heretical dreams
-#define TRAIT_HERETICAL_DREAMS "heretical_dreams"
-
 /// Trait for if you've recently had a Last Word cocktail
 #define TRAIT_HAD_LAST_WORD "had_last_word"
 
@@ -1305,7 +1301,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 // Radiation defines
 
 /// Marks that this object is irradiated
-#define TRAIT_IRRADIATED "iraddiated"
+#define TRAIT_IRRADIATED "irradiated"
 
 /// Immune to being irradiated
 #define TRAIT_RADIMMUNE "rad_immunity"
@@ -1390,8 +1386,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///Trait given to limb by /mob/living/basic/living_limb_flesh
 #define TRAIT_IGNORED_BY_LIVING_FLESH "livingflesh_ignored"
 
-///Trait given to organs that have been inside a living being previously
-#define TRAIT_USED_ORGAN "used_organ"
+///Trait given to organs that have previously been inside a being with a mind
+#define TRAIT_ORGAN_USED_BY_PLAYER "organ_used_by_player"
 ///Trait given to organs that have started inside a being with a client
 #define TRAIT_CLIENT_STARTING_ORGAN "client_starting_organ"
 
@@ -1433,6 +1429,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Trait given when a mob is currently in invisimin mode
 #define TRAIT_INVISIMIN "invisimin"
+
+/// Trait given when a mob has admin esp turned on
+#define TRAIT_ADMIN_ESP "admin_esp"
 
 ///Trait given when a mob has been tipped
 #define TRAIT_MOB_TIPPED "mob_tipped"
@@ -1532,7 +1531,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
  * (This may be changed later but I chose to do it this way to avoid messing up interactions which require combat mode)
  */
 #define TRAIT_COMBAT_MODE_SKIP_INTERACTION "combat_mode_skip_interaction"
-// bars change of combat mode
+///Prevents the user from swapping combat intent.
 #define TRAIT_COMBAT_MODE_LOCK "combat_mode_lock"
 
 ///A "fake" effect that should not be subject to normal effect removal methods (like the effect remover component)
@@ -1598,6 +1597,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Demolition modifier when hitting this object is inverted (ie, 1 / demolition)
 #define TRAIT_INVERTED_DEMOLITION "demolition_inverted"
 
+/// Ignores demolition modifiers
+#define TRAIT_IGNORE_DEMOLITION "ignore_demolition"
+
 /// Makes the mob immune to carpotoxin
 #define TRAIT_CARPOTOXIN_IMMUNE "carpotoxin_immune"
 
@@ -1660,5 +1662,20 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Makes the owner desensetized to death, but happy whenever someone gets blown to pieces (as a sacrifice to the necropolis) unless its another worshipper
 #define TRAIT_NECROPOLIS_WORSHIP "necropolis_worship"
+
+/// Applied to an area, stops random power failures from affecting it
+#define TRAIT_AREA_BLOCK_POWER_FAIL "area_block_power_fail"
+
+/// Sunlight on this turf is blocked and thus you can't get solar power or whatever
+#define TRAIT_TURF_SUN_BLOCKED "turf_sun_blocked"
+
+/// Cannot be backstabbed with a crusher
+#define TRAIT_BACKSTAB_IMMUNE "backstab_immune"
+
+/// Makes the owner immune from the pacification from synthpax
+#define TRAIT_SYNTHPAX_IMMUNE "synthpax_immune"
+
+/// Mobs with this trait will always have be a priority target for mining mobs
+#define TRAIT_MINING_AGGRO "mining_aggro"
 
 // END TRAIT DEFINES

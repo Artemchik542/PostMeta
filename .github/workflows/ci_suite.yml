@@ -74,7 +74,7 @@ jobs:
     name: Completion Gate
     needs: [
         compare_screenshots,
-        #compile_all_maps, - we need ts fixed, so we doesn't include it, for now
+        compile_all_maps,
         run_all_tests,
         run_alternate_tests,
         #run_linters,

@@ -1,4 +1,5 @@
-/mob/living/simple_animal/bot/secbot/threat_react(threatlevel)
+/* proc/threat_react был убран
+/mob/living/basic/bot/secbot/beepsky/threat_react(threatlevel)
 	if(check_holidays(APRIL_FOOLS))
 		..()
 		return
@@ -20,3 +21,4 @@
 		'modular_meta/features/april_fools_day/beepsky/sounds/ubludok.ogg',
 		'modular_meta/features/april_fools_day/beepsky/sounds/voba.ogg',
 	)
+*/
