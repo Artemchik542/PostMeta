@@ -496,7 +496,7 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 	ticket.reply_to_admins_notification(send_message)
 
 	// MASSMETA EDIT START
-	get_ticket_info(send_message, ticket_id, ckey, admin = false, new_ticket = FALSE, engager = "player")
+	get_ticket_info(send_message, ticket_id, ckey, admin = FALSE, new_ticket = FALSE, engager = "player")
 	// MASSMETA EDIT END
 
 	SSblackbox.LogAhelp(ticket_id, "Reply", send_message, recip_ckey, our_ckey)
