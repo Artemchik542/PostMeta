@@ -12,6 +12,7 @@
 /proc/get_ticket_info(message, ticket_id, ckey, admin, new_ticket, engager) //called at adminhelp ln 762
 	var/list/processed_message = list(
 		"type" = "admin_ticket",
+		"ticket_id" = ticket_id,
 		"message" = message,
 		"by_whom" = ckey,
 		"is_admin" = admin,
