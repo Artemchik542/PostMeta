@@ -413,7 +413,6 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 
 		//always play non-admin recipients the adminhelp sound
 		SEND_SOUND(recipient, sound('sound/effects/adminhelp.ogg'))
-		get_ticket_info(send_message, recipient_ticket_id, our_ckey, admin = TRUE, new_ticket = FALSE, engager = "admin")
 		return TRUE
 
 	// Ok if we're here, either this message is for an admin, or someone somehow figured out how to send a new message as a player
@@ -430,7 +429,10 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 				confidential = TRUE)
 			return FALSE
 		ticket.MessageNoRecipient(send_message)
+		//MASSMETA EDIT START
+		get_ticket_info(send_message, ticket_id, our_ckey, admin = FALSE, new_ticket = FALSE, engager = "player")
 		return TRUE
+		//MASSMETA EDIT END
 
 	// Ok by this point the recipient has to be an admin, and this is either an admin on admin event, or a player replying to an admin
 
