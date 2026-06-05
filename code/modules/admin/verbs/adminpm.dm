@@ -381,7 +381,7 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 			new /datum/admin_help(send_message, recipient, TRUE)
 
 			// MASSMETA EDIT START
-			get_ticket_info(send_message, recipient.current_ticket.id, recipient.ckey, admin = TRUE, new_ticket = TRUE, engager = "admin")
+			get_ticket_info(send_message, recipient.current_ticket.id, our_ckey, admin = TRUE, new_ticket = TRUE, engager = "admin")
 			// MASSMETA EDIT END
 
 			already_logged = TRUE
@@ -413,7 +413,7 @@ ADMIN_VERB(cmd_admin_pm_panel, R_NONE, "Admin PM", "Show a list of clients to PM
 
 		//always play non-admin recipients the adminhelp sound
 		SEND_SOUND(recipient, sound('sound/effects/adminhelp.ogg'))
-		get_ticket_info(send_message, recipient_ticket_id, recipient.ckey, admin = TRUE, new_ticket = FALSE, engager = "admin")
+		get_ticket_info(send_message, recipient_ticket_id, our_ckey, admin = TRUE, new_ticket = FALSE, engager = "admin")
 		return TRUE
 
 	// Ok if we're here, either this message is for an admin, or someone somehow figured out how to send a new message as a player
