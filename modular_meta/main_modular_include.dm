@@ -52,6 +52,7 @@
 #include "features\spaceman_races\includes.dm"
 #include "features\ntts-nd-tg-tts\includes.dm"
 #include "features\meta_redesign\includes.dm"
+#include "features\holidays\includes.dm"
 
 /* --- Reverts --- */
 
