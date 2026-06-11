@@ -39,8 +39,9 @@ jobs:
           if [ "$merge" -ne "0" ]; then
             conflicts="$(git diff --name-only --diff-filter=U)"
             {
-            echo "conflicts:"
+            echo "conflicts:<<EOF"
             echo "$conflicts"
+            echo "EOF"
             } >> $GITHUB_OUTPUT
             git add -A
             git commit -m "merge upstream/master w conflicts"
