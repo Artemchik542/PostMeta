@@ -35,11 +35,12 @@ jobs:
           set +e
           git merge --no-edit upstream/master
           merge=$?
+          echo "Exit Code: $merge"
           set -e
           if [ "$merge" -ne "0" ]; then
             conflicts="$(git diff --name-only --diff-filter=U)"
             {
-            echo "conflicts:<<EOF"
+            echo "conflicts<<EOF"
             echo "$conflicts"
             echo "EOF"
             } >> $GITHUB_OUTPUT
@@ -58,4 +59,4 @@ jobs:
           delete-branch: true
           base: master
           title: "Upstream ${{ steps.date_step.outputs.time }}"
-          body: "🆑 MassMeta\n add: Upstream ${{ steps.date_step.outputs.time }}\n /:cl: \n ${{ steps.fetch_upstream.outputs.conflicts }}"
+          body: "🆑 MassMeta\n add: Upstream ${{ steps.date_step.outputs.time }}\n /:cl:\n conflicts: ${{ steps.fetch_upstream.outputs.conflicts }}"
