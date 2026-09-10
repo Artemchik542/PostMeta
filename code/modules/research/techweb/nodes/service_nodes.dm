@@ -39,11 +39,8 @@
 		/datum/design/entertainment_radio,
 		/datum/design/rdd,
 		/datum/design/board/photopcopier,
-<<<<<<< HEAD
 		/datum/design/manual_cell_recharger, // MASSMETA EDIT (more_cell_interactions)
-=======
 		/datum/design/producepad,
->>>>>>> upstream/master
 	)
 
 /datum/techweb_node/sanitation
