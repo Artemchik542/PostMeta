@@ -912,6 +912,10 @@
 	obj_flags |= EMAGGED
 	for(var/found_illegal_mech_nods in SSresearch.techweb_nodes)
 		var/datum/techweb_node/justice/illegal_mech_node = SSresearch.techweb_nodes[found_illegal_mech_nods]
+
+		if(!istype(illegal_mech_node, /datum/techweb_node/justice/))
+			continue
+
 		if(!illegal_mech_node?.illegal_mech_node)
 			continue
 		for(var/design_path in illegal_mech_node.unlocked_designs)
